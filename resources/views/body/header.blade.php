@@ -145,11 +145,11 @@
                         <h6 class="text-overflow m-0">Welcome !</h6>
                     </div>
 
-                    <!-- item-->
+        <!-- item-->
     <a href="{{ route('admin.profile') }}" class="dropdown-item notify-item">
-        <i class="fe-log-out"></i>
-        <span>My Account</span>
-    </a>
+            <i class="fe-log-out"></i>
+            <span>My Account</span>
+        </a>
 
                     <!-- item-->
                     <a href="javascript:void(0);" class="dropdown-item notify-item">
@@ -157,19 +157,19 @@
                         <span>Settings</span>
                     </a>
 
-                    <!-- item-->
-                    <a href="javascript:void(0);" class="dropdown-item notify-item">
-                        <i class="fe-lock"></i>
-                        <span>Lock Screen</span>
-                    </a>
+        <!-- item-->
+    <a href="{{ route('change.password') }}" class="dropdown-item notify-item">
+            <i class="fe-lock"></i>
+            <span>Change Passwoard</span>
+        </a>
 
                     <div class="dropdown-divider"></div>
 
-                    <!-- item-->
-        <a href="{{ route('admin.logout') }}" class="dropdown-item notify-item">
-                        <i class="fe-log-out"></i>
-                        <span>Logout</span>
-                    </a>
+        <!-- item-->
+    <a href="{{ route('admin.logout') }}" class="dropdown-item notify-item">
+            <i class="fe-log-out"></i>
+            <span>Logout</span>
+        </a>
 
                 </div>
             </li>
