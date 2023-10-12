@@ -13,7 +13,8 @@
                 <div class="page-title-box">
                     <div class="page-title-right">
                         <ol class="breadcrumb m-0">
-                            <li class="breadcrumb-item"><a href="javascript: void(0);">Change Passwoard</a></li>
+                            <li class="breadcrumb-item"><a href="javascript: void(0);">Change Passwoard</a> 
+                            </li>
 
                         </ol>
                     </div>
@@ -35,7 +36,7 @@
                             <!-- end timeline content-->
 
 <div class="tab-pane" id="settings">
-    <form method="post" action="{{ route('update.password') }}">
+    <form method="post" action="{{ route('update.password') }}">-
         @csrf
 
         
@@ -51,7 +52,7 @@
 
                 </div>
             </div>
-            <div class="col-md-12">
+            <di class="col-md-12">
                 <div class="mb-3">
                     <label for="firstname" class="form-label">New Passwoard</label>
                     <input type="password" name="new_password" class="form-control @error('password') is-invalid @enderror" id="new_password" >
@@ -61,11 +62,12 @@
                     @enderror
                     
                 </div>
-            </div>
+            </di>
             <div class="col-md-12">
                 <div class="mb-3">
                     <label for="firstname" class="form-label">Confirm New Passwoard</label>
-                    <input type="password" name="new_password_confirmation" class="form-control" id="new_password_confirmation" >
+                    <input type="password" name="new_password_confirmation" class="form-control"            
+                    id="new_password_confirmation" >
                     
                 </div>
             </div>
