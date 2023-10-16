@@ -33,9 +33,14 @@
     <!-- datatables third party css end -->
     
    
-        <! -- Toastr -->
+    <! -- Toastr -->
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" >
-        
+    <! -- End Toastr -->
+
+    <!-- Font-Awesome-Cdn -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- End font-awesome-cdn -->
+    
     </head>
 
     <!-- body start -->
