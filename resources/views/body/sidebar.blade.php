@@ -73,11 +73,23 @@
                             <li>
                                 <a href="{{ route('add.supplier')}}">Add Supplier</a>
                             </li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li>
+                    <a href="#AddAdvanceSalary" data-bs-toggle="collapse">
+                        <i class="mdi mdi-email-multiple-outline"></i>
+                        <span> Employee Salary </span>
+                        <span class="menu-arrow"></span>
+                    </a>
+                    <div class="collapse" id="AddAdvanceSalary">
+                        <ul class="nav-second-level">
                             <li>
-                                <a href="email-compose.html">Compose Email</a>
+                                <a href="{{ route('add.advance.salary')}}">Add Advance Salary</a>
                             </li>
                             <li>
-                                <a href="email-templates.html">Email Templates</a>
+                                <a href="{{ route('all.advance.salary') }}">All Advance Salary</a>
                             </li>
                         </ul>
                     </div>
