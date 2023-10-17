@@ -96,8 +96,20 @@ class SalaryController extends Controller
         return redirect()->route('all.advance.salary')->with($notification); 
 
 
-    }// End Method
+    }// End Method 
 
+    public function DeleteAdvanceSalary($id){
+
+        AdvanceSalary::findOrFail($id)->delete();
+
+        $notification = array(
+            'message' => 'AdvanceSalary Deleted Successfully',
+            'alert-type' => 'success'
+        );
+
+        return redirect()->back()->with($notification); 
+
+    } // End Method 
 
 
 }
