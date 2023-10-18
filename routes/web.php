@@ -37,7 +37,7 @@ Route::middleware('auth')->group(function () {
 
 require __DIR__.'/auth.php';
 
-// Admin Controller All Route //
+// Admin Controller All Route 
 Route::get('/admin/logout', [AdminController::class, 'AdminDestroy'])->name('admin.logout');
 Route::get('/logout', [AdminController::class, 'AdminLogoutPage'])->name('admin.logout.page');
 
@@ -47,9 +47,9 @@ Route::middleware(['auth'])->group(function(){
     Route::post('/admin/profile/store', [AdminController::class, 'AdminProfileStore'])->name('admin.profile.store');
     Route::get('/change/password', [AdminController::class, 'ChangePassword'])->name('change.password'); 
     Route::post('/update/password', [AdminController::class, 'UpdatePassword'])->name('update.password');  
-    // End Admin Controller All Route //
+    // End Admin Controller All Route 
 
-    // Employee All Route //
+    // Employee All Route 
     Route::controller(EmployeeController::class)->group(function(){
         Route::get('/all/employee', 'AllEmployee')->name('all.employee');
         Route::get('/add/employee', 'AddEmployee')->name('add.employee');
@@ -57,10 +57,9 @@ Route::middleware(['auth'])->group(function(){
         Route::get('/edit/employee/{id}','EditEmployee')->name('edit.employee');
         Route::post('/update/employee','UpdateEmployee')->name('employee.update');
         Route::get('/delete/employee/{id}','DeleteEmployee')->name('delete.employee');
+    });// End Employee All Route
 
-    });// End Employee All Route //
-
-    // Customer All Route //
+    // Customer All Route 
     Route::controller(CustomerController::class)->group(function(){
         Route::get('/all/customer', 'AllCustomer')->name('all.customer');
         Route::get('/add/customer','AddCustomer')->name('add.customer');
@@ -68,10 +67,9 @@ Route::middleware(['auth'])->group(function(){
         Route::get('/edit/customer/{id}','EditCustomer')->name('edit.customer');
         Route::post('/update/customer','UpdateCustomer')->name('customer.update');
         Route::get('/delete/customer/{id}','DeleteCustomer')->name('delete.customer');
+    });// End Customer All Route 
 
-    });// End Customer All Route //
-
-    // Supplier All Route //
+    // Supplier All Route 
     Route::controller(SupplierController::class)->group(function(){
         Route::get('/all/supplier', 'AllSupplier')->name('all.supplier');
         Route::get('/add/supplier','AddSupplier')->name('add.supplier');
@@ -81,10 +79,9 @@ Route::middleware(['auth'])->group(function(){
         Route::get('/delete/supplier/{id}','DeleteSupplier')->name('delete.supplier');
 
         Route::get('/details/supplier/{id}','DetailsSupplier')->name('details.supplier');
+    });// End Supplier All Route 
 
-    });// End Supplier All Route //
-
-    // SalaryController All Route //
+    // AddAdvanceSalary All Route 
     Route::controller(SalaryController::class)->group(function(){
         Route::get('/add/advance/salary', 'AddAdvanceSalary')->name('add.advance.salary');
         Route::post('/advance/salary/store','AdvanceSalaryStore')->name('advance.salary.store');
@@ -92,7 +89,17 @@ Route::middleware(['auth'])->group(function(){
         Route::get('/edit/advance/salary/{id}','EditAdvanceSalary')->name('edit.advance.salary');
         Route::post('/advance/salary/update','AdvanceSalaryUpdate')->name('advance.salary.update');
         Route::get('/delete/advance/salary/{id}','DeleteAdvanceSalary')->name('delete.advance.salary');
-    });// End SalaryController All Route //
+    });// End SalaryController All Route
+
+    // Pay Salary All Route 
+    Route::controller(SalaryController::class)->group(function(){
+
+        Route::get('/pay/salary','PaySalary')->name('pay.salary');
+        Route::get('/pay/now/salary/{id}','PayNowSalary')->name('pay.now.salary');
+        Route::post('/employe/salary/store','EmployeSalaryStore')->name('employe.salary.store');
+        Route::get('/month/salary','MonthSalary')->name('month.salary');
+    });// End Pay Salary All Route
+
 
 
 });//End User Middleware
