@@ -131,6 +131,8 @@ Route::middleware(['auth'])->group(function(){
         Route::get('/edit/product/{id}','EditProduct')->name('edit.product');
         Route::post('/update/product','UdateProduct')->name('product.update');
         Route::get('/delete/product/{id}','DeleteProduct')->name('delete.product');
+
+        Route::get('/barcode/product/{id}','BarcodeProduct')->name('barcode.product');
     });//End ProductController All Route 
 
 
