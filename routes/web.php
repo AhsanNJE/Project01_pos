@@ -11,6 +11,7 @@ use App\Http\Controllers\Backend\AttendenceController;
 use App\Http\Controllers\Backend\CategoryController;
 use App\Http\Controllers\Backend\ProductController;
 use App\Http\Controllers\Backend\ExpenseController;
+use App\Http\Controllers\Backend\PosController;
 
 /*
 |--------------------------------------------------------------------------
@@ -151,6 +152,12 @@ Route::middleware(['auth'])->group(function(){
         Route::get('/month/expense','MonthExpense')->name('month.expense');
         Route::get('/year/expense','YearExpense')->name('year.expense');     
     });//End ExpenseController All Route 
+
+    // PosController All Route 
+    Route::controller(PosController::class)->group(function(){
+
+        Route::get('/pos','Pos')->name('pos');
+   });//PosController All Route 
 
 
 });//End User Middleware
