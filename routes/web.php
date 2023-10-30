@@ -161,6 +161,8 @@ Route::middleware(['auth'])->group(function(){
         Route::get('/allitem','AllItem');
         Route::post('/cart-update/{rowId}','CartUpdate');
         Route::get('/cart-remove/{rowId}','CartRemove');
+
+        Route::post('/create-invoice','CreateInvoice');
    });//PosController All Route 
 
 
