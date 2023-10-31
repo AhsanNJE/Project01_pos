@@ -32,13 +32,13 @@
                 <div class="auth-logo">
                     <div class="logo logo-dark">
                         <span class="logo-lg">
-                            <img src="{{ asset('backend/assets/images/logo-dark.png') }}" alt="" height="22">
+                            <img src="{{ asset('backend/assets/images/UnrealSoft.png') }}" alt="" height="22">
                         </span>
                     </div>
 
                     <div class="logo logo-light">
                         <span class="logo-lg">
-                            <img src="{{ asset('backend/assets/images/logo-light.png') }}" alt="" height="22">
+                            <img src="{{ asset('backend/assets/images/UnrealSoft.png') }}" alt="" height="44" width="66">
                         </span>
                     </div>
                 </div>
@@ -171,38 +171,45 @@
     
     
     
-        <form class="px-3" method="post" action="{{ route('category.store') }}">
+        <form class="px-3" method="post" action="{{ url('/final-invoice') }}">
                         @csrf
     
+                    <div class="mb-3">
+                        <label for="username" class="form-label">Payment</label>
+                        <select name="payment_status" class="form-select" id="example-select">
+                            <option selected disabled >Select Payment </option>
+        
+                            <option value="HandCash">HandCash</option>
+                            <option value="Cheque">Cheque</option>
+                            <option value="Due">Due</option>
+        
+                        </select>
+                    </div>
+    
                         <div class="mb-3">
-                    <label for="username" class="form-label">Payment</label>
-        <select name="customer_id" class="form-select" id="example-select">
-                        <option selected disabled >Select Payment </option>
-    
-            <option value="HandCash">HandCash</option>
-            <option value="Cheque">Cheque</option>
-            <option value="Due">Due</option>
-    
-                    </select>
-                        </div>
-    
-                            <div class="mb-3">
-                    <label for="username" class="form-label">Pay Now</label>
-            <input class="form-control" type="text" name="category_name" placeholder="Pay Now">
+                            <label for="username" class="form-label">Pay Now</label>
+                            <input class="form-control" type="text" name="pay" placeholder="Pay Now">
                         </div>
     
     
-                            <div class="mb-3">
-                    <label for="username" class="form-label">Due Amount</label>
-            <input class="form-control" type="text" name="category_name" placeholder="Due Amount ">
+                        <div class="mb-3">
+                            <label for="username" class="form-label">Due Amount</label>
+                            <input class="form-control" type="text" name="due" placeholder="Due Amount ">
                         </div>
     
+   <input type="hidden" name="customer_id" value="{{ $customer->id }}">
+   <input type="hidden" name="order_date" value="{{ date('d-F-Y') }}">
+   <input type="hidden" name="order_status" value="pending">
+   <input type="hidden" name="total_products" value="{{ Cart::count() }}">
+   <input type="hidden" name="sub_total" value="{{ Cart::subtotal() }}">
+   <input type="hidden" name="vat" value="{{ Cart::tax() }}">
+   <input type="hidden" name="total" value="{{ Cart::total() }}"> 
     
                         <div class="mb-3 text-center">
             <button class="btn btn-primary" type="submit">Complete Order </button>
                         </div>
     
-                    </form>
+        </form>
     
                 </div>
             </div><!-- /.modal-content -->

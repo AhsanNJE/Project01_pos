@@ -12,6 +12,7 @@ use App\Http\Controllers\Backend\CategoryController;
 use App\Http\Controllers\Backend\ProductController;
 use App\Http\Controllers\Backend\ExpenseController;
 use App\Http\Controllers\Backend\PosController;
+use App\Http\Controllers\Backend\OrderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -153,7 +154,7 @@ Route::middleware(['auth'])->group(function(){
         Route::get('/year/expense','YearExpense')->name('year.expense');     
     });//End ExpenseController All Route 
 
-    // PosController All Route 
+    // Pos All Route 
     Route::controller(PosController::class)->group(function(){
 
         Route::get('/pos','Pos')->name('pos');
@@ -163,7 +164,19 @@ Route::middleware(['auth'])->group(function(){
         Route::get('/cart-remove/{rowId}','CartRemove');
 
         Route::post('/create-invoice','CreateInvoice');
-   });//PosController All Route 
+   });//End Pos All Route 
+
+   
+    // Order All Route 
+    Route::controller(OrderController::class)->group(function(){
+
+        Route::post('/final-invoice','FinalInvoice');
+        Route::get('/pending/order','PendingOrder')->name('pending.order');
+        Route::get('/order/details/{order_id}','OrderDetails')->name('order.details');
+        Route::post('/order/status/update','OrderStatusUpdate')->name('order.status.update');
+        Route::get('/complete/order','CompleteOrder')->name('complete.order');
+    
+    });//End Order All Route 
 
 
 });//End User Middleware
