@@ -13,6 +13,7 @@ use App\Http\Controllers\Backend\ProductController;
 use App\Http\Controllers\Backend\ExpenseController;
 use App\Http\Controllers\Backend\PosController;
 use App\Http\Controllers\Backend\OrderController;
+use App\Http\Controllers\Backend\RoleController;
 
 
 /*
@@ -139,7 +140,7 @@ Route::middleware(['auth'])->group(function(){
 
         Route::get('/import/product','ImportProduct')->name('import.product');
         Route::get('/export','Export')->name('export');
-        Route::post('/import','Import')->name('import');
+        Route::post('/import','Import')->name('import');    
     });//End ProductController All Route 
 
     
@@ -180,6 +181,13 @@ Route::middleware(['auth'])->group(function(){
         Route::get('/order/invoice-download/{order_id}','OrderInvoice');
     
     });//End Order All Route 
+
+    // RoleController All Route 
+    Route::controller(RoleController::class)->group(function(){
+
+        Route::get('/all/permission','AllPermission')->name('all.permission');
+    
+    });//End RoleController All Route 
 
 
 });//End User Middleware
