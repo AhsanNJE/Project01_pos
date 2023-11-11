@@ -88,7 +88,7 @@
 
         
         <footer class="footer footer-alt">
-            2022 - <script>document.write(new Date().getFullYear())</script> &copy; Easy Pos by <a href="" class="text-white-50">Ahsan</a> 
+            2022 - <script>document.write(new Date().getFullYear())</script> &copy; Easy Pos by <a href="" class="text-white-50">UnrealSoft.</a> 
         </footer>
 
         <!-- Vendor js -->
@@ -97,7 +97,7 @@
         <!-- App js -->
         <script src="{{ asset('backend/assets/js/app.min.js') }}"></script>
 
-        < -- Toastr -->
+        <!-- Toastr -->
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
     
         <script>
