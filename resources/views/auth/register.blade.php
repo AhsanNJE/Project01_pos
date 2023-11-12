@@ -129,7 +129,7 @@
         <!-- end page -->
 
         <footer class="footer footer-alt">
-            2015 - <script>document.write(new Date().getFullYear())</script> &copy; Easy Pos by <a href="" class="text-white-50">UnrealSoft.</a> 
+            2022 - <script>document.write(new Date().getFullYear())</script> &copy; Easy Pos by <a href="" class="text-white-50">UnrealSoft.</a> 
         </footer>
 
         <!-- Vendor js -->

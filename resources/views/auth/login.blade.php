@@ -96,7 +96,7 @@
                         <!-- end card -->
                         <div class="row mt-3">
                             <div class="col-12 text-center">
-                                <p class="text-white-50">Have A Register.?<a href="{{ route('register') }}" class="text-white ms-1"><b>Register</b></a></p>
+                                <p class="text-white-50">Have a register.?<a href="{{ route('register') }}" class="text-white ms-1"><b>Register</b></a></p>
                             </div> <!-- end col -->
                         </div>
                       
